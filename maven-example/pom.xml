@@ -4,9 +4,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
+
 	<groupId>org.jfrog.example.bintray.maven</groupId>
 	<artifactId>multi</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0-alpha.1</version>
 	<packaging>pom</packaging>
 	<name>Multi Modules Build Using Bintray.com</name>
 
@@ -18,11 +19,19 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<bintray.user>trifonnt</bintray.user>
 		<bintray.repo>maven2</bintray.repo>
 		<bintray.package>maven-example</bintray.package>
 	</properties>
+
+	<scm>
+		<connection>scm:git:git@github.com:trifonnt/bintray-examples.git</connection>
+		<developerConnection>scm:git:ssh@github.com:trifonnt/bintray-examples.git</developerConnection>
+		<url>https://github.com/trifonnt/bintray-examples</url>
+		<tag>HEAD</tag>
+	</scm>
 
 	<dependencies>
 		<dependency>
@@ -48,11 +57,26 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>versions-maven-plugin</artifactId>
+				<version>2.2</version>
+			</plugin>
+			<plugin>
+				<artifactId>maven-scm-plugin</artifactId>
+				<version>1.9.5</version>
+				<configuration>
+					<tag>${project.version}</tag>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 
 	<distributionManagement>
 		<repository>
 			<id>bintray-maven2-repo</id>
+			<name>Bintray Maven repository</name>
 			<url>https://api.bintray.com/maven/${bintray.user}/${bintray.repo}/${bintray.package}/;publish=1</url>
 		</repository>
 	</distributionManagement>
