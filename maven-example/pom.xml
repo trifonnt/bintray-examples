@@ -7,7 +7,7 @@
 
 	<groupId>org.jfrog.example.bintray.maven</groupId>
 	<artifactId>multi</artifactId>
-	<version>1.0.0-alpha.1</version>
+	<version>1.0.0-alpha.2</version>
 	<packaging>pom</packaging>
 	<name>Multi Modules Build Using Bintray.com</name>
 
@@ -62,6 +62,9 @@
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>versions-maven-plugin</artifactId>
 				<version>2.2</version>
+				<configuration>
+					<generateBackupPoms>false</generateBackupPoms>
+				</configuration>
 			</plugin>
 			<plugin>
 				<artifactId>maven-scm-plugin</artifactId>
