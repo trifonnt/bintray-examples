@@ -7,7 +7,7 @@
 
 	<groupId>org.jfrog.example.bintray.maven</groupId>
 	<artifactId>multi</artifactId>
-	<version>1.0.0-alpha.4-SNAPSHOT</version>
+	<version>1.0.0-alpha.5-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Multi Modules Build Using Bintray.com</name>
 
