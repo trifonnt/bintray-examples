@@ -6,7 +6,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.jfrog.example.bintray.maven</groupId>
 	<artifactId>multi</artifactId>
-	<version>1.0</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Multi Modules Build Using Bintray.com</name>
 
@@ -21,7 +21,6 @@
 
 		<bintray.user>trifonnt</bintray.user>
 		<bintray.repo>maven2</bintray.repo>
-		<!--bintray.package>ext-lib-amazon-mws-products</bintray.package-->
 		<bintray.package>maven-example</bintray.package>
 	</properties>
 
