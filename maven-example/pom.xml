@@ -28,7 +28,7 @@
 
 	<scm>
 		<connection>scm:git:git@github.com:trifonnt/bintray-examples.git</connection>
-		<developerConnection>scm:git:ssh@github.com:trifonnt/bintray-examples.git</developerConnection>
+		<developerConnection>scm:git:git@github.com:trifonnt/bintray-examples.git</developerConnection>
 		<url>https://github.com/trifonnt/bintray-examples</url>
 		<tag>HEAD</tag>
 	</scm>
